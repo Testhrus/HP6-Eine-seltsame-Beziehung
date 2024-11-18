@@ -1,0 +1,110 @@
+% Sollen die Kommentare des Autors im PDF enthalten sein? Dann unten entsprechen aktivieren/deaktivieren
+
+% Sollen die Ab achtzehn-Sachen im PDF enthalten sein?
+\newcommand{\fsk}{18}
+
+% ---------------
+% Ab hier ändern
+% ---------------
+
+
+% damit Texniccenter die Dateien in der Übersicht öffnen kann, muss der Inhalt den \mainpath in den input-Befehlen ersetzen
+\IfFileExists{./includes/IncludedPackages.tex}
+{\newcommand{\mainpath}{.}}%{true-branch}
+{\newcommand{\mainpath}{../../..}}%{false-branch}
+
+\newcommand{\hogwartslogo}{gray}
+\newcommand{\pdfcreationdef}{D:20080212190426}
+\newcommand{\pdfkeywordsdef}{Frauen, Hermine, Cho, Ginny, Pansy, Luna}
+\newcommand{\titledef}{Eine seltsame Beziehung}
+\newcommand{\authordef}{Daniel Brunner}
+\newcommand{\yeardef}{2008-2024} % 2008-2014 geschrieben
+\newcommand{\published}{2. Ausgabe 2024} % 1. Ausgabe 2015
+\newcommand{\partdef}{Teil eins der Elber-Reihe}
+\newcommand{\firstpublished}{Zuerst veröffentlicht auf 
+\href{https://www.fanfiktion.de/s/52cab44f000207a162539d8/1/Eine-seltsame-Beziehung}{Fanfiktion.de}
+\footnote{https://www.fanfiktion.de/s/52cab44f000207a162539d8/1/Eine-seltsame-Beziehung} von \authordef}
+
+\newcommand{\additionalsdef}
+{
+	\spoiler{Die ersten fünf originalen Bücher.}
+
+	\summary{In Harrys sechstem Jahr macht er eine Entdeckung, die sein Liebesleben auf den Kopf stellt. Harry fühlt sich plötzlich zu Luna hingezogen und durchlebt eine aufregende Zeit mit ihr. Ihre Vereinigung ist mit nichts zu vergleichen. Doch auch die anderen Mädchen Hogwarts entdecken Harrys Reize; sogar die Lehrerinnen. Doch irgendwann entdeckt er, dass sein Herz an Ginny hängt. Und noch einer mischt Harrys Leben auf. Einer seiner Vorfahren hat Verbindung mit ihm aufgenommen. Und dieser hat keinen guten Ruf. Außerdem hat er wieder einen neuen Lehrer in Verteidigung gegen die dunklen Künste. Dieser Lehrer am Anfang sympathisch wird mit der Zeit Harry leicht unheimlich. Was hat er zu verbergen?}
+
+    \disclaimerStd{}
+}
+
+% \hfuzz=1pt
+% \vbadness=10000
+% \clubpenalty = 500
+\raggedbottom
+
+% ---------------
+% Bis hier ändern
+% ---------------
+
+\input{\mainpath/includes/IncludedPackages.tex}
+\input{\mainpath/includes/Harry-Potter/IncludedHPPackages.tex}
+
+\providecommand{\fsk}{0}
+\ifthenelse{\equal{\fsk}{18}}
+{
+    % uncomment to include stuff in standard comment-environment
+    \includecomment{abAchtzehn}
+    \excludecomment{safedivide}
+}{
+    % define a abAchtzehn env which content is excluded
+    \excludecomment{abAchtzehn}
+    \includecomment{safedivide}
+}
+
+\hyphenation{Durm-strang-Di-rek-tor Quid-ditch-Welt-meis-ter-schaft Sly-the-rin Sly-the-rin-Tisch min-der-jährige Ers-tens Zwei-tens Mac-Cor-na-hiew"-Mannschaft}
+
+\listfiles
+\begin{document}
+\input{\mainpath/includes/Titel/Harry-Potter/HP-Titelseite.tex}
+\input{\mainpath/includes/Harry-Potter/DocumentStart.tex}
+
+\input{tex/01-Eine-Squib.tex}
+\input{tex/02-Geburtstagsfeier-und-Numensobligat.tex}
+\input{tex/03-Ankunft-in-Hogwarts.tex}
+\input{tex/04-Luna.tex}
+\input{tex/05-Da-die-DA.tex}
+\input{tex/06-Kaelte-oder-Waerme.tex}
+\input{tex/07-Erste-Annaeherung-oder-doch-nur-eine-Strafe.tex}
+\input{tex/08-Die-Paare-treffen-ein.tex}
+\input{tex/09-Eigenarten.tex}
+\input{tex/10-Vorbereitungen-fuer-das-Fest.tex}
+\input{tex/11-Die-Weihnachtsueberraschung.tex}
+\input{tex/12-In-der-Kammer.tex}
+\input{tex/13-Doktoren-Planeten-und-Seelenteile.tex}
+\input{tex/14-Besuch-vom-Ministerium.tex}
+\input{tex/15-Auf-und-ab.tex}
+\input{tex/16-Erwachen.tex}
+\input{tex/17-Pruefungen-und-Erkenntnisse.tex}
+\input{tex/18-Tage.tex}
+\input{tex/19-Seelenwanderung.tex}
+\input{tex/20-Drachenstein.tex}
+\input{tex/21-Drachenhaufen.tex}
+\input{tex/22-Drachenfeuer.tex}
+\input{tex/23-Aus-grauer-Vorzeit.tex}
+\input{tex/24-Wechselhaftes.tex}
+\input{tex/25-Unschuldige-Erinnerung.tex}
+\input{tex/26-Magie-sammeln.tex}
+\input{tex/27-Eine-Pruefung-die-ist-nicht-lustig.tex}
+\input{tex/28-Wasserwelten.tex}
+\input{tex/29-Eine-neue-Liebe-ist-wie-ein-neues-Leben.tex}
+\input{tex/30-Das-Erwachen.tex}
+\input{tex/31-Verwandlungen.tex}
+\input{tex/32-Leben-und-leben-lassen.tex}
+\input{tex/33-Abschiede.tex}
+
+\vspace{\baselineskip}
+\begin{center}
+\gst \block{Das Ende} \gst
+\end{center}
+
+\includekommentare{}
+%\input{tex/Reviews.tex}
+
+\end{document}

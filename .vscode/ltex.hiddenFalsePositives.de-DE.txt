@@ -1,0 +1,5 @@
+{"rule":"SEHR_GEEHRTER_NAME","sentence":"^\\QSehr geehrter Mister Potter,\\E$"}
+{"rule":"SEHR_GEEHRTER_NAME","sentence":"^\\QSehr geehrter Mister Longbottom,\\E$"}
+{"rule":"SEHR_GEEHRTER_NAME","sentence":"^\\QSehr geehrter Mister Harry James Potter, als Nachlassverwalter und Familiennotar der Familie Black, setzen wir sie gemäß den Bestimmungen der Zaubereibehörde und den Wünschen des verstorbenen Sirius Black in Kenntnis.\\E$"}
+{"rule":"GERMAN_SPELLER_RULE","sentence":"^\\QAuch Parvati war recht gut.\\E$"}
+{"rule":"AUFFORDERUNG_SIE","sentence":"^\\QHaben sie noch eine Frage, Harry?, fragte ihn , als schon alle gegangen waren und Harry alleine im Raum stand und seinen Gedanken hinterher hing.\\E$"}
